@@ -21,10 +21,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       }
       
       try {
-        const response = await axios.get('http://localhost:3001/api/user/profile', {
+        const response = await axios.get('/api/user/profile', {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': '*/*'
+            Authorization: `Bearer ${token}`,
+            Accept: '*/*'
           }
         });
         

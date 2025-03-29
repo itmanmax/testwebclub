@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { AxiosRequestConfig } from 'axios';
 
 // 使用server.js的端口
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = '/api';
 
 export interface Club {
   clubId: number;

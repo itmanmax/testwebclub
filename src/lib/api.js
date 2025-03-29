@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 创建axios实例
 const api = axios.create({
-  baseURL: 'http://localhost:3001/api',
+  baseURL: '/api',
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export const userApi = {
   sendVerifyCode: (email) => {
     // 为验证码发送请求单独设置更长的超时时间
     return axios.post(
-      `${api.defaults.baseURL}/user/send-verify-code?email=${email}`, 
+      `/api/user/send-verify-code?email=${email}`, 
       {}, 
       {
         timeout: 60000, // 60秒超时
